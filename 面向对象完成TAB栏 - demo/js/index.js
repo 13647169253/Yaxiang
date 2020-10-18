@@ -65,8 +65,9 @@ class Tab {
     that.sections[index].remove();
     that.init(); // 删除后重新获取一次元素.
     if (document.querySelector('.liactive')) return  // 让页面发生删除事件时,当前页面上有选中状态的tab栏,不触发下面的点击事件.
-    // 删除当前li时,让上一个li处于选定状态
     index--;
+    if (index = 0) index = index
+    // 删除当前li时,让上一个li处于选定状态
     that.lis[index] && that.lis[index].click();
   }
 
